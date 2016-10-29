@@ -1,5 +1,5 @@
 # Farm Root
-Farm root is a root for android devices using the dirty cow vulnerability in the linux kernel. 
+Farm root is a rooting utility for android devices using the dirty cow vulnerability. 
 
 ## Support
 * Right now it doesn't have support for easy mode root, just pulling and pushing images.

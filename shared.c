@@ -16,11 +16,19 @@ const char *RSF_CACHE_TO_DATA_DONE    = "/cache/recovery/.cache_to_data_done";
 const char *RSF_ALL_DONE              = "/data/local/tmp/.farm_done";
 
 // recovery files
+#ifdef FARM_BOOT
+const char *DISK_RECOVERY_IMG       = "/dev/block/bootdevice/by-name/recovery";
+const char *CACHE_PULL_RECOVERY_IMG = "/cache/recovery/boot_pull.img";
+const char *CACHE_PUSH_RECOVERY_IMG = "/cache/recovery/boot_push.img";
+const char *DATA_PULL_RECOVERY_IMG  = "/data/local/tmp/boot_pull.img";
+const char *DATA_PUSH_RECOVERY_IMG  = "/data/local/tmp/boot_push.img";
+#else
 const char *DISK_RECOVERY_IMG       = "/dev/block/bootdevice/by-name/recovery";
 const char *CACHE_PULL_RECOVERY_IMG = "/cache/recovery/recovery_pull.img";
 const char *CACHE_PUSH_RECOVERY_IMG = "/cache/recovery/recovery_push.img";
 const char *DATA_PULL_RECOVERY_IMG  = "/data/local/tmp/recovery_pull.img";
 const char *DATA_PUSH_RECOVERY_IMG  = "/data/local/tmp/recovery_push.img";
+#endif
 
 
 int rsf_check(const char *file) {

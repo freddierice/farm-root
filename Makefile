@@ -6,6 +6,17 @@ build:
 log: 
 	adb logcat | grep -a farm-root
 
+pull_boot: build 
+	adb push toolbox_pull_boot /data/local/tmp/toolbox
+	adb push libs/arm64-v8a/farm /data/local/tmp/farm
+	adb push till /data/local/tmp/till
+	adb push libs/arm64-v8a/bridge_pull_boot /data/local/tmp/bridge
+	adb shell chmod 0777 /data/local/tmp/bridge /data/local/tmp/till /data/local/tmp/farm /data/local/tmp/toolbox
+	adb shell /data/local/tmp/farm
+	adb pull /data/local/tmp/boot_pull.img
+	adb reboot
+
+
 pull: build 
 	adb push toolbox_pull /data/local/tmp/toolbox
 	adb push libs/arm64-v8a/farm /data/local/tmp/farm

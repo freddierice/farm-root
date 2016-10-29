@@ -22,6 +22,11 @@ Place the image you want to flash in the root directory with the name `recovery_
 make push
 ```
 
+## Pulling a boot image
+```bash
+make pull_boot
+```
+
 ## Notes
 If the log gets stuck here
 ```
@@ -31,6 +36,7 @@ try to get system-server to run a toolbox command. (turning lockscreen on and of
 
 ## TODO
 * fix for armeabi? doesn't seem to work for this architecture right now.
+* use dirty cow to flash boot img
 
 ## Help/Sources
 * https://github.com/timwr/CVE-2016-5195 for dirtycow exploit.

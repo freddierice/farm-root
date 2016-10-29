@@ -22,6 +22,13 @@ Place the image you want to flash in the root directory with the name `recovery_
 make push
 ```
 
+## Notes
+If the log gets stuck here
+```
+farm-root: [*] waiting for process to finish
+```
+try to get system-server to run a toolbox command. (turning lockscreen on and off seems to work for galaxy s7 active). 
+
 ## TODO
 * fix for armeabi? doesn't seem to work for this architecture right now.
 

@@ -11,6 +11,7 @@ LOCAL_MODULE := farm
 LOCAL_LDFLAGS   += -llog
 LOCAL_CFLAGS    += -fPIE
 LOCAL_LDFLAGS   += -fPIE -pie
+LOCAL_C_INCLUDES += $(ANDROID_NDK_HOME)/platforms/android-23/arch-arm/usr/include
 
 include $(BUILD_EXECUTABLE)
 

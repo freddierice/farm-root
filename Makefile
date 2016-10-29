@@ -11,6 +11,7 @@ pull: build
 	adb push libs/arm64-v8a/farm /data/local/tmp/farm
 	adb push till /data/local/tmp/till
 	adb push libs/arm64-v8a/bridge_pull /data/local/tmp/bridge
+	adb shell chmod 0777 /data/local/tmp/bridge /data/local/tmp/till /data/local/tmp/farm /data/local/tmp/toolbox
 	adb shell /data/local/tmp/farm
 	adb pull /data/local/tmp/recovery_pull.img
 	adb reboot
@@ -21,6 +22,7 @@ push: build recovery_push.img
 	adb push libs/arm64-v8a/farm /data/local/tmp/farm
 	adb push till /data/local/tmp/till
 	adb push libs/arm64-v8a/bridge_push /data/local/tmp/bridge
+	adb shell chmod 0777 /data/local/tmp/bridge /data/local/tmp/till /data/local/tmp/farm /data/local/tmp/toolbox /data/local/tmp/recovery_push.img
 	adb shell /data/local/tmp/farm
 	adb reboot
 

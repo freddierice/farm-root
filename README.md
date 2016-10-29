@@ -1,5 +1,10 @@
 # Farm Root
-Farm root is a root for android devices using the dirty cow vulnerability in the linux kernel. Right now it doesn't have support for easy mode root, just pulling and pushing images.
+Farm root is a root for android devices using the dirty cow vulnerability in the linux kernel. 
+
+## Support
+* Right now it doesn't have support for easy mode root, just pulling and pushing images.
+* only tested on galaxy s7 active
+* only works for arm64v8
 
 ## Showing the status
 ```bash
@@ -12,7 +17,7 @@ make pull
 ```
 
 ## Pushing an image (flashing)
-place the image you want to flash in the root directory with the name `recovery_push.img`.
+Place the image you want to flash in the root directory with the name `recovery_push.img`. This is a really dangerous function. Only do this if you know what you are doing.
 ```bash
 make push
 ```
